@@ -1,0 +1,16 @@
+import project.*;
+
+class Project extends HXProject {
+	public function new () {
+		super ();
+		meta = {title: "Fumekuri (kari)", packageName: "org.kawaz.ludumdare2014.kusoge", version: "1.0.0", company: "Kawaz"};
+		app = {main: "Main", path: "Export", file: "fmkr"};
+		window = {width: 1136, height: 640, fps: 60};
+		sources.push ("Source");
+		haxelibs.push (new Haxelib ("openfl"));
+		haxelibs.push (new Haxelib ("actuate"));
+		// assets.push (new Asset ("Assets/openfl.svg"));
+		includeAssets ("Assets", "assets", ["*.jpg", "*.png", "*.mp3", "*.wav"], []);
+		// icons.push (new Icon ("Assets.openfl.svg"));
+	}
+}
